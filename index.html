@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Marketing</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/design-development.css">
+    <link rel="stylesheet" href="assets/css/marketing.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/responsive-new.css">
+    <style>
+        .video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .marketing-banner-text-area {
+            opacity: 0;
+            visibility: hidden;
+            transform: translate3d(0px, 200px, 0px);
+        }
+    </style>
+</head>
+
+<body class="marketing dark-header design-dev">
+
+
+    <!-- start header -->
+    <header>
+        <div class="dd-container dd-container2">
+            <div class="header-wrapper">
+                <a class="site-logo" href="index.html">
+                    <img class="black-logo w-full h-full" src="assets/images/site-logo.svg" alt="71three">
+                    <img class="white-logo w-full h-full hidden" src="assets/images/site-logo-white.svg" alt="71three">
+                </a>
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="index.html">Design & Development</a></li>
+                        <li><a href="marketing.html">Marketing</a></li>
+                        <li><a href="#">WORK</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- mobile menu -->
+                <div class="mobile-hamburger hidden">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <div class="mobile-menu-wrapper">
+                    <div class="relative w-full h-full overflow-hidden">
+                        <div class="mobile-menu">
+                            <div class="mobile-menu-outer relative">
+                                <div class="mobile-menu-inner">
+                                    <div class="mobile-close">
+                                        <img src="assets/images/close.svg" alt="close-btn">
+                                    </div>
+                                    <div class="menu-content">
+                                        <ul>
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="index.html">Design & Development</a></li>
+                                            <li><a href="marketing.html">Marketing</a></li>
+                                            <li><a href="#">WORK</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
+                                        <a class="mobile-menu-contact" href="tel:7134896979">(713) 489-6979</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+    <!-- js files for marketing banner -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <section class="marketing-banner">
+        <div class="banner-video-wrapper relative">
+            <video class="video" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted">
+                <!-- <source src="https://www.dropbox.com/scl/fi/qejf5dgqiv6m77d71r2ec/abstract-background-ink-water-20072.mp4?rlkey=zwgwzw4bfhx7oy034t7un6mod&raw=1" type="video/mp4" /> -->
+                <!-- <source src="assets/videos/digital marketing - 30 fps 7 seconds.mp4" type="video/mp4" /> -->
+                <source src="assets/videos/output.mp4" type="video/mp4" />
+            </video>
+
+            <!-- scroll bottom -->
+            <div class="scroll-mouse-outer">
+                <div id="scrolling-mouse"></div>
+            </div>
+
+
+            <!-- marketing banner text -->
+            <div class="marketing-banner-text-area relative">
+                <div class="marketing-banner-content">
+                    <h1 class="section-headline">
+                        Winning isn't luck. It’s strategy.
+                    </h1>
+                    <p>Accelerate your business and leave the competition in the dust.</p>
+                    <span class="contact-banner">
+                        <a href="tel:7134896979">(713) 489-6979</a>|
+                        <a href="mailto:hello@71three.com">hello@71three.com</a>
+                    </span>
+                </div>
+            </div>
+            <!-- end marketing banner text -->
+        </div>
+    </section>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const coolVideo = document.querySelector(".video");
+        const scrollMouseOuter = document.querySelector(".scroll-mouse-outer");
+        const marketingBanner = document.querySelector(".marketing-banner-text-area");
+
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".banner-video-wrapper",
+                start: "top top",
+                end: "bottom+=200% bottom",
+                scrub: true,
+                pin: true
+            }
+        });
+
+        coolVideo.onloadedmetadata = function () {
+            console.log(coolVideo.duration);
+
+            tl.to(coolVideo, { currentTime: coolVideo.duration, ease: "none" });
+
+            tl.to(scrollMouseOuter, {
+                opacity: 0,
+                y: 200,
+            }, "50%");
+
+            tl.set(marketingBanner, {
+                visibility: "visible"
+            }, "50%")
+                .to(marketingBanner, {
+                    opacity: 1,
+                    y: 0,
+                }, "50%");
+        };
+
+        function isTouchDevice() {
+            return (
+                "ontouchstart" in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0
+            );
+        }
+
+        if (isTouchDevice()) {
+            coolVideo.play();
+            coolVideo.pause();
+        }
+
+    </script>
+
+
+
+    <div class="featured">
+        demo section
+    </div>
+
+
+
+
+    <script src="assets/js/common.js"></script>
+
+    <!-- js files for marketing banner -->
+    <script src="assets/js/marketing.js"></script>
+    <!-- banner video gsap -->
+
+
+</body>
+
+</html>

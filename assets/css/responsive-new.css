@@ -1,0 +1,256 @@
+
+
+/* responsive */
+@media (min-width: 1500px){
+    .black-marbel-main-media{
+        margin-bottom: -80px;
+    }
+    /* .ct-media-inner {
+        height: 300px;
+    } */
+}
+
+
+@media (min-width: 1700px) {
+    .single-count{
+        width: 160px;
+        height: 115px;
+    }
+    /* .ct-media-inner {
+        height: 380px;
+    } */
+}
+
+@media (min-width: 2000px) {
+    .dd-container2 {
+        max-width: 1900px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .banner-zoom-out-wrapper{
+        gap: 1.2rem;
+    }
+    /* .cityside-media-right{
+        padding: 0 15px 0 15px;
+    } */
+    .dd-common-content p,
+    .dd-common-content a{
+        font-size: 20px;
+    }
+    .common-content-inner{
+        max-width: 320px;
+    }
+    .black-marbel-main-media,
+    .dd-zara-right{
+        margin-bottom: -78px;
+    }
+    /* .ct-media-inner {
+        height: 520px;
+    } */
+    .ct-count-ratio{
+        left: 12%;
+    }
+    .zara-video, .zara-img{
+        max-width: 350px;
+        /* height: 650px; */
+        height: auto;
+    }
+    /* .header-nav ul li a{
+        font-size: 18px;
+    } */
+    /* .site-logo{
+        max-width: 220px;
+        flex: 0 0 220px;
+    } */
+
+}
+@media (min-width: 2300px){
+    .cityside-media-right{
+        gap: 65px;
+    }
+}
+
+
+@media (min-width: 1440px){
+    .dd-banner-content{
+        font-size: 85px;
+    }
+    .dd-banner-container{
+        max-width: 1355px;
+    }
+}
+
+@media (max-width: 1920px){
+    .dd-single-block{
+        height: 18.9vh;
+    }
+}
+@media (max-width: 1150px){
+    .dd-banner-content{
+        font-size: 70px;
+    }
+    .dd-zara-right{
+        padding-top: 150px;
+    }
+}
+@media (max-width: 1024px){
+    .dd-container{
+        padding: 0px 20px;
+    }
+    .banner-zoom-out-wrapper{
+        height: auto;
+    }
+    .dd-banner-content{
+        font-size: 60px;
+    }
+    .design-development-banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .banner-zoom-out-wrapper{
+       justify-content: inherit;
+        gap: .5rem;
+
+        /* height: auto; */
+    }
+    .dd-single-block{
+        height: 8vh;
+    }
+    .banner-zoom-out-wrapper{
+        transform: scale(10);
+    }
+    .dd-falafel-bg{
+        background-size: cover;
+    }
+    .dd-common-content,
+    .black-marble-img{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .black-marbel-main-media{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .black-marbel-main-media .leaf-branch {
+        right: -50px;
+    }
+    .cityside-media{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .cityside-content{
+        margin-bottom: 80px;
+    }
+    .cityside-media-left,
+    .cityside-media-right{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    /* .ct-media-inner {
+        height: 500px;
+    } */
+    .cityside-media-right{
+        padding: 0;
+    }
+    .cityside-bg{
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+    .dd-zara-right{
+        max-width: 100%;
+        flex: 0 0 100%;
+        flex-wrap: wrap;
+    }
+    .dd-zara-wrapper{
+        padding: 0 20px;
+    }
+    .zara-video, .zara-img{
+        max-width: 350px;
+        height: auto;
+        width: 100%;
+    }
+    .dd-faq{
+        max-width: 60%;
+    }
+}
+@media (max-width: 768px){
+    .dd-banner-content{
+        font-size: 41px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .banner-zoom-out-wrapper{
+        gap: .45rem;
+    }
+    /* .ct-media-inner {
+        height: 380px;
+    } */
+    .ct-media-inner img,
+    .ct-media-inner video,
+    .zara-img img,
+    .zara-video video{
+        object-fit: fill;
+    }
+    .dd-common-content a{
+        margin-top: 70px;
+    }
+    .dd-faq{
+        max-width: 100%;
+    }
+    .faq-answer p{
+        padding-top: 0;
+    }
+    .dd-zara-right.active .zara-video{
+        transition: all 3s;
+    }
+    .dd-zara-right.active .zara-img{
+        transition: all 1s;
+    }
+    .leaf{
+        left: -25px;
+        width: 80px;
+    }
+    .dd-zara-right{
+        padding-top: 140px;
+    }
+}
+@media (max-width: 640px){
+    .dd-banner-content{
+        font-size: 30px;
+    }
+    .dd-single-block{
+        height: 7.15vh;
+    }
+    .banner-zoom-out-wrapper{
+        /* row-gap: 5px; */
+        transform: scale(13);
+        gap: .288rem;
+    }
+    .black-marbel-main-media{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .black-marbel-main-media .leaf-branch {
+        right: -20px;
+    }
+    /* .ct-media-inner {
+        height: 250px;
+    } */
+    .dd-section-btn{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .faq-answer p{
+        max-width: 90%;
+    }
+    .zara-img{
+        height: auto;
+    }
+}
+@media (max-width: 430px){
+    /* .ct-media-inner {
+        height: 200px;
+    } */
+}
